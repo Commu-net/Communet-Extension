@@ -1,0 +1,37 @@
+{
+    
+    "manifest_version": 3,
+    "key":"MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDPQ8xArq1iCkMBTC5mo7MFd1SU3uFxu40rEUcCVZSJLZyKF6/eN5obwncCcZYIf6aghehvu2mzLfI9cHzPQYSXh2QmUGCLWE2rtHPL6WB3jj0p77YvpImVv/JSQYeJXXlzzWAJTrO/IfwoR3UTzLxLYDrkXYAC5dDyy9oPeZBYJnb9vDIEOEEU6fw/yRU3XkWXiBV956H6eY3vERIfPO/XByIKNTISlvMluW3NwlCveKXw6IFg9zQUAKuWIiIbdxVoCAZo/DU60m/ITJ1Y/FePbrmg0s0hjeujhZMC2IC0vsXfa1T28RAcWCfuincOHVp+uzypK8X3EU6eVvXk8EKhAgMBAAECggEACXzEStbg5EkTw+mKTppCSOCrYPy9m7JAZhvIDdQzOxisGGm49amPs6L+32ap12EmFFjJonx7YqXN3fOAhKlhmeDeYmvK3fLTuPJG9XfZ00jFOPgaW7gi47vVEK0KOLn48L/4z1EO1+CeeI0iaVHovpe8w/sZr66rlimWcjkYAXwWkh9OtaMi+w56hjDfEkAa2eJfZfmdLTni/BCFGCj1zv6tjDeFY3vp2Hi3jE8uv+3rgZTobCsBLfGVUdjYvDAudg/zbDegHWkhHYW1c+QY627U/0YCfjjbGcCK2JqlVZEPnX/Fup7PoVMCtlCi+YPkVL9JQwoFQfmnzXZNSpb4SQKBgQDoSX0M1uvYaopWVWxhg8kaxF4muNqM8WiPUgvMDDHqswUqoI//SPM8d1n4GTjREv77mBpy3JMv6gmsb8Bc4I1J2w8e0cT9bh7+TxQnGDPdKs7rExRhMo3F+ZfbCm23LacCSxYEZNLVcmtFpQNy6pgrm7uMPxxzMvGQ3ZjmaPCHdQKBgQDkbGMNTfpxIabHB0zMa+kuPT5AsmmiJNaBFofIJ28JaUsUMEA4OR9c+h7XcEHLQr8xvbsWC712Kz+AXQaJ/s0RFl78LS5vIxU+rVD0nm9v+r5E8Ko5s7aemf4e0nXVwVxb1vKe/J9sf0D2anRYckwDMyUiRIWgB6QOjmTJJqhU/QKBgQCt2BIWweLQnSvbYSMz+AVSWxR7tm0afrHaUXUyyQ2ysTh0pqYeUOJ5pnlXDMlQ7/6VHUjuHdaqTWXf/+Lfn88eLywpzKS5ZukbOuPCPoLSS2+Az065T7R7LklQTYW/ShNry/Y2Y57G0FMoVE84egpY2LyMQc9xB/dyi+Yayv744QKBgQC1M/o7srFKj6xy1Kqqu6wGH1VEE4RSuTBkxQ+/yvB9ocaKZGB9eWsU4eIXe5jl+rQbbGx+Z5/LnzFHzgQC8luRA5MkL19XkJgo2WqQMyMpzNqla9lN3u+uz3BU2RXbFQIEZPahArwhYK2TDQ3wn/MG0srRbVQniAgv9+uh2oXMrQKBgQDdGUq+1r6eNlvl71yli4LUQAV/Ht+w+5N+8eIWVUr8T78GtlTgUkWBACpqQ9eDauRdgKlt0tpGYvP7m0qJcxfWuOctT00q8ZQGVWfrbnCTveIaZZ7E5E90HoylEXrpa1wq0TpaDUwKKTLsKCo5mXFL0fkJuQ3bK4X1hzGagplAUg==",
+    "name": "Chrome Extension v3 Starter",
+    "description": "A minimal example of a chrome extension using manifest v3",
+    "version": "0.0.1",
+    
+    "icons": {
+        "16": "logo/logo-16.png",
+        "48": "logo/logo-48.png",
+        "128": "logo/logo-128.png"
+    },  
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "Chrome Addon v3 Starter",
+        "default_popup": "./popup.html"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "identity",
+        "cookies"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+       
+    },
+    "content_scripts": [{
+        "js": ["foreground.js"],
+        "matches": ["https://www.linkedin.com/*/*"]
+    }]
+}
