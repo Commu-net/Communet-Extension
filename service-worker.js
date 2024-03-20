@@ -11,7 +11,7 @@ console.log(
 
 let USER_SIGNED_IN = false;
 const CLIENT_ID = encodeURIComponent(
-  "248175880781-dker1grm01ad73lgppi4587p95d27niq.apps.googleusercontent.com"
+  "<YOUR_CLIENT_ID>"
 );
 const RESPONSE_TYPE = encodeURIComponent("id_token");
 const REDIRECT_URI = encodeURIComponent(
@@ -37,7 +37,6 @@ function user_signed_in() {
 function getGoogleId() {
   return GOOGLE_ID;
 }
-// id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImVkODA2ZjE4NDJiNTg4MDU0YjE4YjY2OWRkMWEwOWE0ZjM2N2FmYzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyNDgxNzU4ODA3ODEtZGtlcjFncm0wMWFkNzNsZ3BwaTQ1ODdwOTVkMjduaXEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyNDgxNzU4ODA3ODEtZGtlcjFncm0wMWFkNzNsZ3BwaTQ1ODdwOTVkMjduaXEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDM5ODIxNTQyNDk0MDE0OTQyMDgiLCJub25jZSI6IjEyMyIsIm5iZiI6MTcwNzkzODAyNiwiaWF0IjoxNzA3OTM4MzI2LCJleHAiOjE3MDc5NDE5MjYsImp0aSI6IjQ2MDI3MDA5YzdlYTM2YWIyYzQ3ODNhZTMwMDEyNGNiZThmNjY4MGIifQ.nEDwFz-TKnP-hYdwZYI8T6RGU0zyU5xQAjQ7iUXBzQDgzFIohtaDwbk6ykxQ8wuPbYPwQJf4ak4oKrD3wqxAPA7xXCVglCE0l-UIO_oQUA8MtUvufqtzAB47ujf8KX_ouYBiLT8o_SmBBQ8D0PQ-G1yHG5xks55cLWbfFPb1qS-K2Tw-c-R2XOjp-QI-gRLsJ_Pzsu8_qdsqWSD98QeIzsq8E65zhf7557HwNKTlScId10ExnzTPAEhkdLfnyEM1E9y9L_9noOnK-EsL5sSYLRKwLa2k_BRw-i-q28HOiCmHP7SIyvXdJfVV9SOwwJW9e7I829U5YyVwIctmYKOQZQ
 
 chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
   if (request.message === "login") {
